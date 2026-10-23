@@ -44,12 +44,16 @@ body {
   border-radius: 10px;
 }
 
-#left img {
+#left figure {
+  margin: 0;
   width: 100%;
-  object-fit: fill;
-  display: block;
+  min-height: 100%;
+  background-image: url("images/image-product-desktop.jpg");
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 #right {
@@ -124,4 +128,31 @@ body {
 
 .btn div span {
   font-weight: 700;
+}
+
+@media (max-width: 40rem) {
+  html {
+    font-size: 50%;
+  }
+}
+
+@media (max-width: 34rem) {
+  html {
+    font-size: 43.75%;
+  }
+}
+
+@media (max-width: 30rem) {
+  .product-card {
+    grid-template-columns: 1fr;
+    max-width: 40rem;
+    min-height: 40rem;
+  }
+  #left figure {
+    background-image: url("images/image-product-mobile.jpg");
+    min-height: 250px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 0px;
+    border-top-right-radius: 10px;
+  }
 }
